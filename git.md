@@ -79,6 +79,52 @@ $ git commit -m “remove readme.txt”
 `$ git checkout HEAD^ -- readme.txt`
 
 ***
+### git的命令  
+#### 分支：
+##### 创建并切换：
+`$ git checkout -b dev`
+##### 相当于：
+```
+$ git branch dev
+$ git checkout dev
+```
+
+#### 查看分支：
+`$ git branch`
+
+#### 切换分支：
+`$ git checkout master`
+
+##### 合并分支：
+`$ git merge dev`
+
+##### 删除分支：
+`$ git branch -d dev`
+
+##### 带参数的log查看分支合并的情况：
+`$ git log --graph --pretty=oneline`
+
+#### 分支管理策略
+
+##### 非快速的方式合并分支：要新commit所以就-m，这种方式能看出来曾经做过合并
+`$ git merge --no-ff -m "merge with on-ff" dev`
+
+##### 将工作区隐藏  
+`$ git stash`
+
+##### 查看隐藏的列表
+`$ git stash list`
+
+##### 切换回隐藏区，同时把stash的记录删除  
+`$ git stash pop`
+
+##### 切换回隐藏区，不删除stash的记录
+`$ git stash apply stash@{0}`  
+
+##### 强制删除未合并的分支
+`$ git branch -D feature-vulcan`
+
+***
 
 #### 远程学习
 
