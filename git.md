@@ -116,5 +116,16 @@ H 加密的，所以，需要一点设置：
 分支
 
 
+多人协作
+
+github上新建了分支，本地仓库无法识别问题  
+
+```
+$ git checkout master   //切换到master分支
+$ git pull				//pull一下，更新一下
+$ git branch -a 		//查看就可以看到分支了
+```
+然后本地分支，与github的分支连接
+`$ git checkout -b dev origin/dev`
 
 
