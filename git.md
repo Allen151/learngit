@@ -175,3 +175,31 @@ $ git branch -a 		//查看就可以看到分支了
 `$ git checkout -b dev origin/dev`
 
 
+#### 打标签，标签也是个快照，但是不会移动的  
+`$ git tag v1.0`
+
+为过去的时间点打标签  
+```
+$ git log --pretty=oneline --abbrev-commit   //找到id
+$ git tag v0.9 c6ecc61    //为这个id打标签
+```  
+复杂的添加标签方式，有描述  
+`$ git tag -a v1.1 -m "这里添加的.project文件是HBuilder项目的默认文件" 5cf895a`  
+查看标签的详细事情  
+`$ git show v1.1`  
+删除标签  
+`$ git tag -d v0.9`
+推标签到远程  
+`$ git push origin v1.0`  
+一次性推全部标签到远程  
+`$ git push origin --tags`  
+删除远程的标签  
+```
+$ git tag -d v1.0  //先在本地删除  
+$ git push origin :refs/tags/v1.0     //再删除远程的
+```  
+设置git显示不同的颜色  
+`$ git config --global color.ui true`  
+
+配置别名，不学  
+搭建私人git仓库不学
