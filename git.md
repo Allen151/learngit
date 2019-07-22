@@ -79,7 +79,7 @@ $ git commit -m “remove readme.txt”
 恢复已经删除分支的文件  
 `$ git checkout HEAD^ -- readme.txt`
 
-#### 分支
+### 分支
 ***
 创建并切换：  
 `$ git checkout -b dev`
