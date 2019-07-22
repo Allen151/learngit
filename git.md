@@ -128,4 +128,8 @@ $ git branch -a 		//查看就可以看到分支了
 然后本地分支，与github的分支连接
 `$ git checkout -b dev origin/dev`
 
+之后可以在分支上工作，用`git add 文件全名` 与`git commit -m "描述"`将文件上传到本地仓库  
+
+然后将本地文件上传到`github`  
+`git push origin dev`
 
